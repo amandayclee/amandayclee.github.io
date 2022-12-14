@@ -7,7 +7,13 @@ const shouldAnalyseBundle = process.env.ANALYSE_BUNDLE
 module.exports = {
   pathPrefix: `/web`,
   siteMetadata: {
-    siteTitleAlt: `Minimal Blog - Gatsby Theme`,
+      // Used for the title template on pages other than the index site
+      siteTitle: `Yi Chien Lee`,
+      // Default title of the page
+      siteUrl: `https://github.com/amandayclee/web`,
+      // Used for SEO
+      siteDescription: `Personal Website`,
+      // Used for og:image and must be placed inside the `static` folder
   },
   plugins: [
     {
@@ -26,12 +32,16 @@ module.exports = {
         ],
         externalLinks: [
           {
-            name: `Twitter`,
-            url: `https://twitter.com/lekoarts_de`,
+            name: `LinkedIn`,
+            url: `https://www.linkedin.com/in/yichienleee/`,
           },
           {
-            name: `Instagram`,
-            url: `https://www.instagram.com/lekoarts.de/`,
+            name: `Resume`,
+            url: `https://www.linkedin.com/in/yichienleee/`,
+          },
+          {
+            name: `Github`,
+            url: `https://github.com/amandayclee/`,
           },
         ],
       },
