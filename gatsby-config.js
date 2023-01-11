@@ -5,7 +5,7 @@ require(`dotenv`).config({
 const shouldAnalyseBundle = process.env.ANALYSE_BUNDLE
 
 module.exports = {
-  pathPrefix: `/web`,
+  // pathPrefix: `/web`,
   siteMetadata: {
       // Used for the title template on pages other than the index site
       siteTitle: `Mandy's Delivery Service`,
