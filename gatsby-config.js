@@ -8,15 +8,15 @@ module.exports = {
   pathPrefix: `/web`,
   siteMetadata: {
       // Used for the title template on pages other than the index site
-      siteTitle: `Yi Chien's Delivery Service`,
+      siteTitle: `Mandy's Delivery Service`,
       // Default title of the page
       siteUrl: `https://github.com/amandayclee/web`,
       // Used for SEO
       siteDescription: `Personal Website`,
       // Used for og:image and must be placed inside the `static` folder
-      siteTitleAlt: `Yi Chien's Delivery Service`,
+      siteTitleAlt: `Mandy's Delivery Service`,
       // Can be used for e.g. JSONLD
-      siteHeadline: `Yi Chien's Delivery Service`,
+      siteHeadline: `Mandy's Delivery Service`,
   },
   plugins: [
     {
@@ -59,9 +59,9 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Yi Chien Lee`,
-        short_name: `minimal-blog`,
-        description: `Typography driven, feature-rich blogging theme with minimal aesthetics. Includes tags/categories support and extensive features for code blocks such as live preview, line numbers, and code highlighting.`,
+        name: `Mandy's Delivery Service`,
+        short_name: `Mandy's Delivery Service`,
+        description: `Personal Website`,
         start_url: `/`,
         background_color: `#fff`,
         theme_color: `#6B46C1`,
