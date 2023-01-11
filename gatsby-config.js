@@ -8,12 +8,15 @@ module.exports = {
   pathPrefix: `/web`,
   siteMetadata: {
       // Used for the title template on pages other than the index site
-      siteTitle: `Yi Chien Lee`,
+      siteTitle: `Yi Chien's Delivery Service`,
       // Default title of the page
       siteUrl: `https://github.com/amandayclee/web`,
       // Used for SEO
       siteDescription: `Personal Website`,
       // Used for og:image and must be placed inside the `static` folder
+      siteTitleAlt: `Yi Chien's Delivery Service`,
+      // Can be used for e.g. JSONLD
+      siteHeadline: `Yi Chien's Delivery Service`,
   },
   plugins: [
     {
@@ -56,7 +59,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `minimal-blog - @lekoarts/gatsby-theme-minimal-blog`,
+        name: `Yi Chien Lee`,
         short_name: `minimal-blog`,
         description: `Typography driven, feature-rich blogging theme with minimal aesthetics. Includes tags/categories support and extensive features for code blocks such as live preview, line numbers, and code highlighting.`,
         start_url: `/`,
