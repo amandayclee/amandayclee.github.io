@@ -1,0 +1,21 @@
+---
+title: "Google Summer of Code 2024"
+date: 2024-06-10
+tag:
+    - gsoc
+    - open-source
+---
+
+## 前言
+Google Summer of Code 是一個推廣開源貢獻的項目，由 Google 作為平台媒合 Organization 跟 Contributor。今年是我第一次報名 GSoC，很幸運地通過 Proposal 篩選得到了參加項目的資格。今年從五月底開始正式啟動。
+
+## 貢獻進行式
+### Week 1
+我的項目在於創建一個 local dev env 以能夠最貼近於 prod env。原先的 configuration management tools 使用的是 Salt Stack，但由於 Salt Stack 不再支援 Creative Commons 所使用的 Debian 12，遂決議改使用 Ansible。
+
+在最一開始的時候，我對於整個 Dev Ops Lifecycle 還沒有很明確的認知。對於我的項目來說，主要是聚焦在 Deploy Stage。在這個 Deploy Stage 裡面又能夠分成 Provisioning 以及 Configuration。而我剛開始的時候並不知道 Creative Commons 目前是直接手動 Provision 的，還以為是要用 Ansible 來 Provision。然而用 Configuration management tools 來 Provision 並不是最好的狀況，可能會有資訊安全上的疑慮，並且最初 Ansible 也並非設計為 Provision 用途，這之中的複雜度會大為增加，故維持手動 Provision 的做法。
+
+這個項目的最終目標是將目前現有的應用都放到分別的 Container 當中，Ansible Server 本身也是一個 Container，並用 SSH 與各個 Container 做溝通。Week 1 的部分，在做完 Docker Container 以及 Ansible 的 Getting Starter，並且參考 Docker Hub Ansible Dockerfile 後，我成功部署了一個 Initial Ansible Container。
+
+### Week 2
+To be continue....
