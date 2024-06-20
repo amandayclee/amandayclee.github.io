@@ -1,9 +1,8 @@
 ---
 title: "Google Summer of Code 2024"
 date: 2024-06-10
-tag:
-    - gsoc
-    - open-source
+tags:
+    - open source
 ---
 
 ## 前言
@@ -18,4 +17,13 @@ Google Summer of Code 是一個推廣開源貢獻的項目，由 Google 作為�
 這個項目的最終目標是將目前現有的應用都放到分別的 Container 當中，Ansible Server 本身也是一個 Container，並用 SSH 與各個 Container 做溝通。Week 1 的部分，在做完 Docker Container 以及 Ansible 的 Getting Starter，並且參考 Docker Hub Ansible Dockerfile 後，我成功部署了一個 Initial Ansible Container。
 
 ### Week 2
-To be continue....
+第二週的代辦事項為把原本的 index-dev（使用 Apache2 運行的網站）拆為 Web-dev 以及 Db-dev Container，以及為第三週的 Bastion Server 做先行的研究。這個部分由於我對於原先的架構（Linux Apache MySQL PHP）不太了解，所以在 configuration 上面把有的東西複製下來貼上。事後我的 Mentor 告訴我，我們應該要從最基本的開始 config，而不是一口氣因為有前任的 Project 參考，就直接把所有東西貼上。按照順序的 Commits 有助於讓開發者了解到思考的邏輯。
+
+另外我們重新討論到了 Provisioning 跟 Configuration 的議題，包含 Dockerfile 跟 Docker-compose.yml 的任務歸屬。Dockerfile 主要用於 provisioning。它定義了如何構建 Docker Image，包括基礎鏡像、安裝的軟件包、複製的文件等。Dockerfile 的理念是 "build it once, use it multiple times"。Docker-compose.yml 更多地關注於 configuration。它定義了如何運行容器，包括容器之間的關係、端口映射、掛載的卷、環境變量等。這些設置往往因部署環境而異，所以 Docker-compose.yml 會更頻繁地變動。
+
+本週我們改變了合作的模式，最後的 Deliverable 由我的 Mentor 產出，添加了產出 ssh key 的 shell script，以及設定 local <-> Ansible 的 ssh access ，我 Review 此次的 PR 並提出疑問。
+
+### Week 3
+第三週的部分因為 #11 PR 所以我需要原創的部分較少，我這週負責了 local <-> Web-dev, local <-> Db-dev 的 ssh access，以及 ansible <-> Web-dev, Db-dev。
+
+TBD...
