@@ -21,9 +21,9 @@ Google Summer of Code 是一個推廣開源貢獻的項目，由 Google 作為�
 
 另外我們重新討論到了 Provisioning 跟 Configuration 的議題，包含 Dockerfile 跟 Docker-compose.yml 的任務歸屬。Dockerfile 主要用於 provisioning。它定義了如何構建 Docker Image，包括基礎鏡像、安裝的軟件包、複製的文件等。Dockerfile 的理念是 "build it once, use it multiple times"。Docker-compose.yml 更多地關注於 configuration。它定義了如何運行容器，包括容器之間的關係、端口映射、掛載的卷、環境變量等。這些設置往往因部署環境而異，所以 Docker-compose.yml 會更頻繁地變動。
 
-本週我們改變了合作的模式，最後的 Deliverable 由我的 Mentor 產出，添加了產出 ssh key 的 shell script，以及設定 local <-> Ansible 的 ssh access ，我 Review 此次的 PR 並提出疑問。
+本週我們改變了合作的模式，最後的 Deliverable 由我的 Mentor 產出，添加了產出 ssh key 的 shell script，以及設定 local {'<'}-{'>'} Ansible 的 ssh access ，我 Review 此次的 PR 並提出疑問。
 
 ### Week 3
-第三週的部分因為 #11 PR 所以我需要原創的部分較少，我這週負責了 local <-> Web-dev, local <-> Db-dev 的 ssh access，以及 ansible <-> Web-dev, Db-dev。
+第三週的部分因為 #11 PR 所以我需要原創的部分較少，我這週負責了 local {'<'}-{'>'} Web-dev, local {'<'}-{'>'} Db-dev 的 ssh access，以及 ansible {'<'}-{'>'} Web-dev, Db-dev。
 
 TBD...
