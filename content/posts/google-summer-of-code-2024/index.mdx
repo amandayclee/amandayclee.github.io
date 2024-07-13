@@ -25,5 +25,12 @@ Google Summer of Code 是一個推廣開源貢獻的項目，由 Google 作為�
 
 ### Week 3
 第三週的部分因為 #11 PR 所以我需要原創的部分較少，我這週負責了 local {'<'}-{'>'} Web-dev, local {'<'}-{'>'} Db-dev 的 ssh access，以及 ansible {'<'}-{'>'} Web-dev, Db-dev。
+同時這週的 Sync 也因為我白天正職的實習開始了，延期到隔週一。這部分我比較慶幸的是前三週花了很多時間跟 Mentor 溝通、建立默契，所以一週的缺席並沒有影響太多進度。
 
-TBD...
+### Week 4 & 5
+第四週開始寫 Ansible Playbook，把一些原本放在 web/Dockerfile 的東西移過去 Playbook。將 Dockerfile 和 Ansible Playbook 相結合的做法是一種常見的 Best practice: Dockerfile 負責基礎映像的構建，包括 OS 和基本工具的安裝，Ansible Playbook 則負責應用程式和服務的配置。這個部分比預期中花了一些時間，現在回頭看可能是因為在 Week 3 的時候，由於我沒有實際上開發過，也花太少時間去研究 LAMP(Linux, Apache, MySQL, PHP) Stack，所以不知道到底要怎麼設定各個 Component 的 Configuration，導致我一直無法成功啟用 Service，系統給予的錯誤訊息也引導我去錯誤的方向，原本以為是因為沒有權限從 Anisble Playbook access 到 web-dev Server，但後來發現不是這個問題（可能是因為沒有正確 Config Apache2 though...）。後來回頭去看了一下我的 Mentor 在第三週是怎麼寫每一個 Server 的 Dockerfile，發現 db 其實也需要一個 Startupservice 的 Shell script，這部分因為我 Shell Command 不熟所以之前都是看看就過了，不確定真正細節要怎麼處理，所以也額外花了一些時間補足 Linux Shell Script 的相關知識。
+
+### Week 6
+前兩週我也提前把 Midterm Evaluation 的 Blog Post 寫好，沒想到拖到 Week 6 都還沒 Post。不過也好險他們把我的文章放到最後修改，讓我有長一點的 Deadline 可以觀摩別人怎麼寫的。本週需要精修的地方是把文章的架構再分得更細一些，然後要加上 GitHub Repo 的 Link 以及 Chart。
+
+另外回頭接續去做 Bastion Server 的相關設定，TBD...
